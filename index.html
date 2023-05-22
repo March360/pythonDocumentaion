@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+</head>
+<body>
+
+<!-- navigation bar area -->
+    <nav id="navbar">
+      <header class="nav-header">Python Documentation</header>
+      <ul class="menu-items">
+      <div class="listContainer">
+      <li class="list-nav"><a href="#Introduction"class="nav-link activeNav">Introduction</a></li>
+      <li class="list-nav"><a href="#Hello_World"class="nav-link">Hello World</a></li>
+      <li class="list-nav"><a href="#Variables"class="nav-link">Variables</a></li>
+      <li class="list-nav"><a href="#decVariables"class="nav-link">Declaring Variables</a></li>
+      <li class="list-nav"><a href="#Variable_Scope"class="nav-link">Variable Scope</a></li>
+      <li class="list-nav"><a href="#Data_Types"class="nav-link">Data Types</a></li>
+      <li class="list-nav"><a href="#IfElseStatement"class="nav-link">If Else Statement</a></li>
+      <li class="list-nav"><a href="#While_Loops"class="nav-link">While Loops</a></li>
+      <li class="list-nav"><a href="#funcDec"class="nav-link">Function Declaration</a></li>
+      <li class="list-nav"><a href="#reference"class="nav-link">Reference</a></li>
+      
+      </div>
+      </ul>
+      <!-- hamburger button start -->
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+        <!-- hamburger button end -->
+        </nav>
+
+<!-- navigation bar end -->  
+
+
+<!-- container area start -->
+    <main id="main-doc">
+      <section id="Introduction" class="main-section">
+        <header>Introduction</header>
+        <h3>What is Python?</h3>
+        <p>Python is a popular programming language. It was created by Guido van Rossum, and released in 1991.</p>
+        <p>It is used for:</p>
+         
+        <ul>
+          <li>web development (server-side),</li>
+          <li>software development</li>
+          <li>mathematics</li>
+          <li>system scripting</li>
+        </ul>
+       <h3>What can Python do?</h3>
+       <ul>
+    <li> Python can be used on a server to create web applications.</li>
+    <li> Python can be used alongside software to create workflows.</li>   
+    <li> Python can connect to database systems. It can also read and modify files.</li>  
+    <li> Python can be used to handle big data and perform complex mathematics.</li>  
+    <li>Python can be used for rapid prototyping, or for production-ready software development. </li>  
+       </ul>
+        <h3>Why Python?</h3>
+       <ul>
+        <li>Python works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc).</li>
+        <li>Python has a simple syntax similar to the English language.</li>
+        <li>Python has syntax that allows developers to write programs with fewer lines than some other programming languages. </li>
+        <li>Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This means that prototyping can be very quick.</li>
+        <li>Python can be treated in a procedural way, an object-oriented way or a functional way.</li>
+       </ul>
+       <h3>Good to know</h3>
+       <ul>
+        <li>The most recent major version of Python is Python 3, which we shall be using in this tutorial. However, Python 2, although not being updated with anything other than security updates, is still quite popular.</li>
+        <li>In this tutorial Python will be written in a text editor. It is possible to write Python in an Integrated Development Environment, such as Thonny, Pycharm, Netbeans or Eclipse which are particularly useful when managing larger collections of Python files.</li>
+       </ul>
+      </section>
+       <section id="Hello_World" class="main-section">
+         <header>Hello World</header>
+         <p>Let's write our first Python file, called helloworld.py, which can be done in any text editor.</p>
+         <code>print("Hello, World!")
+        </code>
+        <p>The output should read:</p>
+        <code>Hello World!</code>
+      </section>
+       <section id="Variables" class="main-section">
+         <header>Variables</header>
+         <p>A Python variable is a reserved memory location to store values. In other words, a
+          variable in a python program gives data to the computer for processing.
+          </p>
+          <p>Every value in Python has a datatype. Different data types in Python are Numbers,
+            List, Tuple, Strings, Dictionary, etc. Variables can be declared by any name or even
+            alphabets like a, aa, abc, etc</p>
+            <h3>Variable Naming Rules in Python</h3>
+            <p>1. Variable name should start with letter(a-zA-Z) or underscore (_)</p>
+            <code>Valid : age , _age , Age <br>
+              Invalid : 1age</code>
+              <p>2.In variable name, no special characters allowed other than underscore (_).</p>
+              <code>Valid : age_ , _age <br>
+                Invalid : age_*</code>
+      </section>
+       <section id="decVariables" class="main-section">
+         <header>Declaring Variables</header>
+  
+         <p>Variables are containers for storing data values.</p>
+         <h3>Creating Variables</h3>
+          <p>Python has no command for declaring a variable.</p>
+          <p>A variable is created the moment you first assign a value to it.</p>
+         <code>x = 5 <br>
+           y = "John" <br>
+           print(x) <br>
+           print(y)</code>
+          <p>Variables do not need to be declared with any particular type, and can even change type after they have been set.</p>
+          <code>x = 4       # x is of type int <br>
+           x = "Sally" # x is now of type str <br>
+           print(x)</code>
+        
+        
+      </section>
+       <section id="Variable_Scope" class="main-section">
+         <header>Variable Scope</header>
+        <p>A variable is only available from inside the region it is created. This is called scope.</p>
+        <h3>Local Scope</h3>
+         <p>A variable created inside a function belongs to the local scope of that function, and can only be used inside that function.</p>
+         <p>A variable created inside a function is available inside that function:</p>
+        <code>def myfunc(): <br>
+          x = 300 <br>
+          print(x) <br>
+        
+        myfunc()</code>
+         <h3>Global Scope</h3>
+         <p>A variable created in the main body of the Python code is a global variable and belongs to the global scope.</p>
+         <p>Global variables are available from within any scope, global and local.</p>
+         <p>A variable created outside of a function is global and can be used by anyone:</p>
+         <code>x = 300 <br>
+  
+          def myfunc(): <br>
+            print(x) <br>
+          
+          myfunc() <br>
+          
+          print(x)</code>
+          <h3>Naming Variables</h3>
+          <p>If you operate with the same variable name inside and outside of a function, Python will treat them as two separate variables, one available in the global scope (outside the function) and one available in the local scope (inside the function):</p>
+          <p>The function will print the local x, and then the code will print the global x:</p>
+          <code>x = 300 <br>
+  
+            def myfunc(): <br>
+              x = 200 <br>
+              print(x) <br>
+            
+            myfunc() <br>
+            
+            print(x)</code>
+      </section>
+      <section id="Data_Types" class="main-section">
+        <header>Data Types</header>
+        <h3>Built-in Data Types</h3>
+       <p>In programming, data type is an important concept.</p>
+        <p>Variables can store data of different types, and different types can do different things.</p>
+        <p>Python has the following data types built-in by default, in these categories:</p>
+       
+        <ul>
+          <li>Text Type:	str</li>
+          <li>Numeric Types:	int, float, complex</li>
+          <li>Sequence Types:	list, tuple, range</li>
+          <li>Mapping Type:	dict</li>
+          <li>Set Types:	set, frozenset</li>
+          <li>Boolean Type:	bool</li>
+          <li>Binary Types:	bytes, bytearray, memoryview</li>
+          <li>None Type:	NoneType</li>
+        </ul>
+       <h3>Getting the Data Type</h3>
+       <p>You can get the data type of any object by using the type() function:</p>
+       <code>x = 5 <br>
+        print(type(x))</code>
+     </section>
+      <section id="IfElseStatement" class="main-section">
+        <header>If Else Statement</header>
+        <h3>Python Conditions and If statements</h3>
+       <p>Python supports the usual logical conditions from mathematics:</p>
+       <ul>
+        <li>Equals: a == b</li>
+       <li>Not Equals: a != b</li>
+       <li>Less than: a < b</li>
+       <li>Less than or equal to: a <= b</li>
+       <li>Greater than: a > b</li>
+       <li>Greater than or equal to: a >= b</li>
+      </ul>
+        <p>These conditions can be used in several ways, most commonly in "if statements" and loops.</p>
+       <p>An "if statement" is written by using the if keyword.</p>
+       <p>If statement:</p>
+        <code>
+          a = 33 <br>
+          b = 200 <br>
+          if b > a: <br>
+            print("b is greater than a")</code>
+        <h3>Elif</h3>
+        <p>The elif keyword is pythons way of saying "if the previous conditions were not true, then try this condition".</p>
+        <code>
+          a = 33 <br>
+          b = 33 <br>
+          if b > a: <br>
+            print("b is greater than a") <br>
+          elif a == b: <br>
+            print("a and b are equal")
+        </code>
+        <h3>Else</h3>
+        <p>The else keyword catches anything which isn't caught by the preceding conditions.</p>
+        <code>
+          a = 200 <br>
+          b = 33 <br>
+          if b > a: <br>
+            print("b is greater than a") <br>
+          elif a == b: <br>
+            print("a and b are equal") <br>
+          else: <br>
+            print("a is greater than b") 
+  
+        </code>
+        <h3>Nested If</h3>
+        <p>You can have if statements inside if statements, this is called nested if statements.</p>
+        <code>
+             x = 41 <br>
+            if x > 10: <br>
+              print("Above ten,") <br>
+              if x > 20: <br>
+                print("and also above 20!") <br>
+              else: <br>
+                print("but not above 20.")
+        </code>
+       
+     </section>
+      <section id="While_Loops" class="main-section">
+        <header> While Loops</header>
+        <h3>Python Loops</h3>
+       <p>Python has two primitive loop commands:</p>
+       <ul>
+        <li>while loops</li>
+        <li>for loops</li>
+       </ul>
+       <h3>The while Loop</h3>
+        <p>With the while loop we can execute a set of statements as long as a condition is true.</p>
+        <p>Print i as long as i is less than 6:</p>
+       <code>
+        i = 1 <br>
+        while i < 6: <br>
+          print(i) <br>
+          i += 1
+       </code>
+       <h3>The Break Statement</h3>
+       <p>With the break statement we can stop the loop even if the while condition is true:</p>
+        <code>
+          i = 1 <br>
+          while i < 6: <br>
+            print(i) <br>
+            if i == 3: <br>
+              break <br>
+            i += 1 
+        </code>
+        <h3>The continue Statement</h3>
+        <p>With the continue statement we can stop the current iteration, and continue with the next:</p>
+        <p>Continue to the next iteration if i is 3:</p>
+        <code>
+          i = 0 <br>
+          while i < 6: <br>
+            i += 1 <br>
+            if i == 3: <br>
+              continue <br>
+            print(i) 
+        </code>
+        <h3>The else Statement</h3>
+        <p>With the else statement we can run a block of code once when the condition no longer is true:</p>
+        <p>Print a message once the condition is false:</p>
+        <code>
+          i = 1 <br>
+          while i < 6: <br>
+            print(i) <br>
+            i += 1 <br>
+          else: <br>
+            print("i is no longer less than 6")
+        </code>
+     </section>
+     <section id="funcDec" class="main-section">
+      <header>Function Declaration</header>
+      <p>A function is a block of code which only runs when it is called.</p>
+      <p>You can pass data, known as parameters, into a function.</p>
+      <p>A function can return data as a result.</p>
+      <h3>Creating a Function</h3>
+      <p>In Python a function is defined using the def keyword:</p>
+      <code>
+        def my_function(): <br>
+          print("Hello from a function")
+      </code>
+      <h3>Calling a Function</h3>
+      <p>To call a function, use the function name followed by parenthesis:</p>
+      <code>
+        def my_function(): <br>
+            print("Hello from a function") <br>
+  
+          my_function()
+      </code>
+     </section>
+     <section id="reference" class="main-section" style="height: 100vh">
+        <header>Reference</header>
+        <ul>
+          <li>All the documentation in this page is taken from <a href="https://www.w3schools.com/python/default.asp" target="_blank">w3schools</a></li>
+        </ul>
+     </section>
+    </main>
+    
+<!-- container area end -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="javascript.js"></script>
+</body>
+</html>
